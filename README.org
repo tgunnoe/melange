@@ -3,16 +3,20 @@
 
 * How does this relate to computing?
 ** Goals
-*** I don't like to repeat myself, ever. This repository will allow me to have a
-matching machine across any device in my possession, minus the hardware differences
-required for configuration. Cross phone/laptop/desktop/SBC/server, then define
-only the difference you'd like in those machines (e.g. x86 binaries on desktop)
+*** I don't like to repeat myself, ever
+This repository will allow me to have a matching machine across any device in my
+possession, minus the hardware differences required for configuration. Cross
+phone/laptop/desktop/SBC/server, then define only the difference you'd like in
+those machines (e.g. x86 binaries on desktop)
 *** Any nix derivations for packages I create will originate from ./pkgs/
-*** If shit hits the fan on any of my devices (hardware failure, broken phone
-etc), I SHOULD be able to substitute any defined devices in its place.
-*** Once you create a package, it should last forever. And it will here. Full
-archival support for eternity thanks to nix and upcoming flakes standard.
-**** I will NEVER have to fuck with legacy app/game support, thanks to nix and
-wine/dosbox. See https://github.com/lutris/lutris/issues/666
-*** With all of these goal above, we should be able to reimagine John McCarthy's
+*** Hardware failures
+If shit hits the fan on any of my devices (hardware failure, broken phone etc),
+I SHOULD be able to substitute any defined devices in its place.
+*** Once you create a package, it should be eternal.
+And it will here. Full archival support for eternity thanks to nix and upcoming
+flakes standard.
+**** I will NEVER have to fuck with legacy app/game support
+thanks to nix and wine/dosbox. See https://github.com/lutris/lutris/issues/666
+*** Reimagining the ultimate computer
+With all of these goal above, we should be able to reimagine John McCarthy's
 image of a universal network of computing power accessed by any "terminal"
