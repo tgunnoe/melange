@@ -1,0 +1,13 @@
+[
+  ./core
+  ./develop
+  ./develop/kakoune
+  ./develop/tmux
+  ./develop/zsh
+  ./games
+  ./graphical
+  ./graphical/qutebrowser
+  ./graphical/sway
+  ./misc
+  ./virt
+]
