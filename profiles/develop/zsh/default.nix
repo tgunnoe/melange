@@ -83,7 +83,7 @@ in
       "autocontinue"
       "promptsubst"
     ];
-
+    initExtra = "source ${pkgs.zsh-powerlevel9k}/share/zsh-powerlevel9k/powerlevel9k.zsh-theme";
     promptInit = ''
       eval "$(${pkgs.starship}/bin/starship init zsh)"
     '';
