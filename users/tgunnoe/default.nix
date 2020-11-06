@@ -1,24 +1,24 @@
 { lib, pkgs, ... }:
 let
   inherit (builtins) tofile readfile;
-  inherit (lib) filecontents mkforce;
+  inherit (lib) fileContents mkForce;
 
-  name = "taylor gunnoe";
+  name = "Taylor Gunnoe";
 in
 {
 
   imports = [ ../../profiles/develop /*./vpn.nix ./mail.nix ./graphical*/ ];
 
-  users.users.root.hashedpassword = filecontents ../../secrets/root;
+  users.users.root.hashedPassword = fileContents ../../secrets/root;
 
   users.users.tgunnoe.packages = with pkgs; [ pandoc ];
 
   programs.gnupg.agent = {
     enable = true;
-    enablesshsupport = true;
+    enableSSHSupport = true;
   };
 
-  environment.systempackages = with pkgs; [ cachix ];
+  environment.systemPackages = with pkgs; [ cachix ];
 
   home-manager.users.tgunnoe = {
     imports = [
@@ -26,6 +26,7 @@ in
       ../profiles/alacritty
       ../profiles/direnv
       ../profiles/emacs
+      nurNoPkgs.repos.rycee.hmModules.emacs-init
     ];
 
     home = {

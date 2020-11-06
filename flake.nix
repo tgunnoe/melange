@@ -6,15 +6,17 @@
       master.url = "nixpkgs/master";
       nixos.url = "nixpkgs/release-20.03";
       home.url = "github:rycee/home-manager/bqv-flakes";
+      nur.url = "github:nix-community/NUR";
       futils.url = "github:numtide/flake-utils";
     };
 
-  outputs = inputs@{ self, home, nixos, master, futils }:
+  outputs = inputs@{ self, home, nur, nixos, master, futils }:
     let
       inherit (builtins) attrNames attrValues readDir;
       inherit (nixos) lib;
       inherit (lib) recursiveUpdate;
       inherit (utils) pathsToImportedAttrs overlaysToPkgs;
+      inherit (nur) pkgs;
       inherit (futils.lib) eachSystem defaultSystems;
 
       utils = import ./lib/utils.nix { inherit lib; };
